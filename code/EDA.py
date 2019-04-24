@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import graphfuncs as gf
+import os.path
+import prepare_data as prep
 
-df = pd.read_csv('OnlineNewsPopularity.csv')
+#df = pd.read_csv('OnlineNewsPopularity.csv')
+df = prep.prepare_data('OnlineNewsPopularity.csv')
 
 timedelta_col = [1]
 word_cols = [2, 3, 4, 5, 6, 11]

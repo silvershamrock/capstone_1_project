@@ -17,17 +17,11 @@ from sklearn.decomposition import PCA
 from sklearn import preprocessing
 import shap
 import matplotlib.pyplot as plt
+import os.path
+import prepare_data as prep
 
 #%% Prepare dataset and parameters
-df = pd.read_csv('OnlineNewsPopularity.csv')
-
-#### Strip white space from column names and add log shares
-df.columns = df.columns.str.strip()
-df['logshares'] = np.log(df['shares'])
-
-          
-#Drop url, shares, weekday_is_monday, is_weekend
-df = df.drop(['shares', 'url', 'weekday_is_monday', 'is_weekend'], axis=1)
+df = prep.prepare_data('OnlineNewsPopularity.csv')
 
 #Get attribute names
 attributes = df.columns.drop('logshares')
@@ -42,7 +36,7 @@ X = df[attributes]
 # specify your configurations as a dict
 params = {
     'boosting': 'gbrt',
-    'objective': 'regression',
+    'objective': 'regression_l1',
     'n_estimators': 100
 }
 
@@ -211,7 +205,7 @@ print("The best params are: {}".format(gridsearch.best_params_))
 model = lgb.LGBMRegressor(boosting_type = 'gbrt',
                           objective = 'regression_l1',
                           random_state = 42,
-                          n_estimators = 500,
+                          n_estimators = 100,
                           learning_rate = .01
                           )
    
