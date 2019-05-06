@@ -35,7 +35,7 @@ X = df[attributes]
 
 # specify your configurations as a dict
 params = {
-    'boosting': 'gbrt',
+    'boosting': 'gbdt',
     'objective': 'regression_l1',
     'n_estimators': 100
 }
@@ -220,7 +220,7 @@ model = lgb.LGBMRegressor(boosting_type = 'gbrt',
 #        #'colsample_bytree': np.arange(.1, 1.01, .1)
 #        
 #        }
-param_opt =  {
+params_opt =  {
                     'learning_rate': [0.0065, 0.007, 0.0075],
                     'n_estimators': [70, 80, 90, 100],
                     'num_leaves': [8, 16, 32],
