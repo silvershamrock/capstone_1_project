@@ -113,7 +113,9 @@ df_mae = pd.DataFrame.from_dict(maedict,
 plotdata = df_mae.sort_values('mae_diff_from_full')
 fig, ax = plt.subplots()
 ax.bar(x=plotdata.index, height=plotdata.mae_diff_from_full)
-ax.set_xticklabels(labels=plotdata.index, rotation=60)
+ax.set_ylabel('Increase in MAE following removal')
+ax.set_xlabel('Attribute removed')
+#ax.set_xticklabels(labels=plotdata.index, rotation=60)
 
 
 #%%Do PCA on variables whose inclusion decrease error by <.0005
@@ -210,14 +212,27 @@ model = lgb.LGBMRegressor(boosting_type = 'gbrt',
                           )
    
 #parameters to optimize
-params_opt = {
-        #'max_depth': range(4, 9, 2),
-        #'n_estimators': [100],
-        #'min_child_samples': range(20, 101, 10)
-        #'num_leaves': range(20, 101, 20)
-        #'colsample_bytree': np.arange(.1, 1.01, .1)
-        
-        }
+#params_opt = {
+#        #'max_depth': range(4, 9, 2),
+#        #'n_estimators': [100],
+#        #'min_child_samples': range(20, 101, 10)
+#        #'num_leaves': range(20, 101, 20)
+#        #'colsample_bytree': np.arange(.1, 1.01, .1)
+#        
+#        }
+param_opt =  {
+                    'learning_rate': [0.0065, 0.007, 0.0075],
+                    'n_estimators': [70, 80, 90, 100],
+                    'num_leaves': [8, 16, 32],
+                    'boosting_type' : ['gbdt'],
+                    'objective' : ['regression_l1'],
+                    'random_state' : [501], # Updated from 'seed'
+                    'colsample_bytree' : [0.64, 0.65, 0.66],
+                    'subsample' : [0.65, 0.7, 0.75, 0.8],
+                    'reg_alpha' : [1, 1.2],
+                    'reg_lambda' : [1, 1.2, 1.4],
+                    }
+
 
 #Run grid search
 gridsearch = GridSearchCV(estimator = model, 
