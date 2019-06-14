@@ -1,0 +1,42 @@
+RandomizedSearchCV took 1022.34 seconds for 20 candidates parameter settings.
+
+Model with rank: 1
+Mean validation score: -0.597 (std: 0.008)
+Parameters: {'colsample_bytree': 0.4272152036135739, 'learning_rate': 0.052600622467385234, 'max_depth': None, 'n_estimators': 378, 'num_leaves': 36, 'reg_alpha': 1.0239466546185165, 'reg_lambda': 1.2494059998317952, 'subsample': 0.8840496720033673}
+
+Model with rank: 2
+Mean validation score: -0.597 (std: 0.009)
+Parameters: {'colsample_bytree': 0.32924384995294825, 'learning_rate': 0.06178947856897182, 'max_depth': 4, 'n_estimators': 419, 'num_leaves': 21, 'reg_alpha': 1.1112293074279362, 'reg_lambda': 1.063765761072698, 'subsample': 0.4455024991002813}
+
+Model with rank: 3
+Mean validation score: -0.598 (std: 0.009)
+Parameters: {'colsample_bytree': 0.38424917758355637, 'learning_rate': 0.08632253611286052, 'max_depth': 4, 'n_estimators': 423, 'num_leaves': 38, 'reg_alpha': 1.0447263455783784, 'reg_lambda': 0.28044575366792734, 'subsample': 0.5893816395144216}
+
+Model with rank: 4
+Mean validation score: -0.598 (std: 0.009)
+Parameters: {'colsample_bytree': 0.4972758334047702, 'learning_rate': 0.0619459334060637, 'max_depth': 8, 'n_estimators': 486, 'num_leaves': 30, 'reg_alpha': 0.6725521582253872, 'reg_lambda': 0.8493141000155234, 'subsample': 0.8522158357296599}
+
+Model with rank: 5
+Mean validation score: -0.598 (std: 0.009)
+Parameters: {'colsample_bytree': 0.8671342541118161, 'learning_rate': 0.07945265202999686, 'max_depth': 4, 'n_estimators': 381, 'num_leaves': 38, 'reg_alpha': 0.6546272817657637, 'reg_lambda': 0.7849682569790128, 'subsample': 0.4839680976284373}
+
+Model with rank: 6
+Mean validation score: -0.598 (std: 0.008)
+Parameters: {'colsample_bytree': 0.46901399091465285, 'learning_rate': 0.06264689484258153, 'max_depth': 16, 'n_estimators': 384, 'num_leaves': 38, 'reg_alpha': 0.31787172489531507, 'reg_lambda': 0.1613816000256074, 'subsample': 0.37231745063961386}
+
+Model with rank: 7
+Mean validation score: -0.598 (std: 0.008)
+Parameters: {'colsample_bytree': 0.6150622177944967, 'learning_rate': 0.04441314342680256, 'max_depth': 24, 'n_estimators': 348, 'num_leaves': 32, 'reg_alpha': 0.20471716738420714, 'reg_lambda': 0.8596051110756711, 'subsample': 0.8976875940208795}
+
+Model with rank: 8
+Mean validation score: -0.598 (std: 0.009)
+Parameters: {'colsample_bytree': 0.5517665541712057, 'learning_rate': 0.1059249910316973, 'max_depth': 16, 'n_estimators': 318, 'num_leaves': 11, 'reg_alpha': 1.3574779612099732, 'reg_lambda': 0.6352610678761222, 'subsample': 0.9199688850992545}
+
+Model with rank: 9
+Mean validation score: -0.598 (std: 0.008)
+Parameters: {'colsample_bytree': 0.579549338733889, 'learning_rate': 0.11137837200519787, 'max_depth': None, 'n_estimators': 311, 'num_leaves': 22, 'reg_alpha': 1.056766806079712, 'reg_lambda': 0.9838756743791569, 'subsample': 0.44526883478789103}
+
+Model with rank: 10
+Mean validation score: -0.599 (std: 0.008)
+Parameters: {'colsample_bytree': 0.639632909171115, 'learning_rate': 0.11941901990222063, 'max_depth': 4, 'n_estimators': 440, 'num_leaves': 21, 'reg_alpha': 0.00817652873581185, 'reg_lambda': 1.2691631924852402, 'subsample': 0.7464185440240493}
+

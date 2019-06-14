@@ -19,6 +19,7 @@ import shap
 import matplotlib.pyplot as plt
 import os.path
 import prepare_data as prep
+from scipy.stats import uniform, 
 
 #%% Prepare dataset and parameters
 df, _ = prep.prepare_data('OnlineNewsPopularity.csv')
@@ -37,7 +38,8 @@ X = df[attributes]
 params = {
     'boosting': 'gbdt',
     'objective': 'regression_l1',
-    'n_estimators': 100
+    'n_estimators': 100,
+    'learning_rate': 0.1
 }
 
 #Create datasets for lgbm
@@ -62,7 +64,8 @@ model = lgb.LGBMRegressor(boosting_type = 'gbrt',
                           objective = 'regression_l1',
                           random_state = 42,
                           n_estimators = 100,
-                          learning_rate = .01
+                          learning_rate = .01,
+                          max_depth = -1
                           )
    
 #parameters to optimize
@@ -75,16 +78,16 @@ model = lgb.LGBMRegressor(boosting_type = 'gbrt',
 #        
 #        }
 params_opt =  {
-                    'learning_rate': [0.0065, 0.007, 0.0075],
-                    'n_estimators': [70, 80, 90, 100],
-                    'num_leaves': [8, 16, 32],
-                    'boosting_type' : ['gbdt'],
-                    'objective' : ['regression_l1'],
-                    'random_state' : [501], # Updated from 'seed'
-                    'colsample_bytree' : [0.64, 0.65, 0.66],
-                    'subsample' : [0.65, 0.7, 0.75, 0.8],
-                    'reg_alpha' : [1, 1.2],
-                    'reg_lambda' : [1, 1.2, 1.4],
+                    'learning_rate': [0.01, .1],
+                    'n_estimators': [80, 100],
+                    'num_leaves': [64],
+                    #'boosting_type' : ['gbdt'],
+                    #'objective' : ['regression_l1'],
+                    #'random_state' : [501], # Updated from 'seed'
+                    'colsample_bytree' : [0.65],
+                    'subsample' : [0.65],
+                    'reg_alpha' : [1.2],
+                    'reg_lambda' : [1.2],
                     }
 
 

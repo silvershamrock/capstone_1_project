@@ -89,9 +89,7 @@ for day in groups['day_cols']:
     df.loc[dayrows,'dayofweek'] = day.split('_')[-1]
     
 #plot the distributions of shares in box plot by day of week
-#df['logshares'] = np.log(df.iloc[:,share_col[0]])
 plt.figure()
-#sns.catplot(x=df.loc[df['category'].notnull(),'category'], y=df[df['category'].notnull()].iloc[:,share_col[0]], kind='violin')
 g = sns.catplot(x='dayofweek', y='logshares', data=df, kind='box')
 g.set_xticklabels(rotation=30)
 g.set()

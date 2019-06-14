@@ -1,0 +1,14 @@
+RandomizedSearchCV took 38.72 seconds for 3 candidates parameter settings.
+
+Model with rank: 1
+Mean validation score: -0.600 (std: 0.008)
+Parameters: {'colsample_bytree': 0.3301048577639477, 'learning_rate': 0.06521484268014656, 'max_depth': None, 'n_estimators': 230, 'num_leaves': 14, 'reg_alpha': 1.0518496620505047, 'reg_lambda': 0.5226348318444958, 'subsample': 0.5450115905940821}
+
+Model with rank: 2
+Mean validation score: -0.600 (std: 0.008)
+Parameters: {'colsample_bytree': 0.9793189502210893, 'learning_rate': 0.09782552985574845, 'max_depth': None, 'n_estimators': 201, 'num_leaves': 26, 'reg_alpha': 1.1205114348914353, 'reg_lambda': 0.02513925729175872, 'subsample': 0.6868565862006832}
+
+Model with rank: 3
+Mean validation score: -0.605 (std: 0.007)
+Parameters: {'colsample_bytree': 0.9774773997905066, 'learning_rate': 0.15986908809954548, 'max_depth': None, 'n_estimators': 482, 'num_leaves': 31, 'reg_alpha': 0.4201015179072018, 'reg_lambda': 1.3581527164271547, 'subsample': 0.631101771014928}
+

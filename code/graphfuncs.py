@@ -56,6 +56,7 @@ def get_pair_plot(data, column_list = None, hue = None, ignore_cancelled = False
     plt.show()
 
 def get_corr_heat_map(data, ignore_cancelled = False):
+    sns.set(font_scale=1.2)
     if ignore_cancelled:
         data = data[data['is_cancelled'] == 0].drop('is_cancelled', axis = 1)
     data_to_visualize = data[~data.isin([np.nan, np.inf, -np.inf]).any(1)]
@@ -73,7 +74,7 @@ def get_corr_heat_map(data, ignore_cancelled = False):
     # Apply yticks
     #plt.yticks(range(len(corr.columns)), corr.columns)
     # show plot
-    plt.show()
+    #plt.show()
 
 def get_class_balance(data):
     fig, ax = plt.subplots(figsize=(15, 10))

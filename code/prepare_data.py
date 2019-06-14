@@ -8,6 +8,7 @@ Created on Wed Apr 24 14:33:14 2019
 import os.path
 import pandas as pd
 import numpy as np
+import re
 
 def prepare_data(filename):
     
@@ -46,12 +47,17 @@ def prepare_data(filename):
     # Prepare dataset and parameters
     df = pd.read_csv(filepath)
 
-    #### Strip white space from column names and add log shares
+    #Strip white space from column names and add log shares
     df.columns = df.columns.str.strip()
     df['logshares'] = np.log(df['shares'])
-         
+
+    #Parse dates in URL and add month as feature
+    df['month'] = df['url'].apply(lambda x: int(re.findall('20\d{2}/\d{2}/\d{2}', x)[0].split('/')[1]))    
+    df['month_sin'] = np.sin((df.month-1)*(2.*np.pi/12))
+    df['month_cos'] = np.cos((df.month-1)*(2.*np.pi/12))
+    
     #Drop url, shares, weekday_is_monday, is_weekend
-    df = df.drop(['shares', 'url', 'weekday_is_monday', 'is_weekend'], axis=1)
+    df = df.drop(['shares', 'url', 'weekday_is_monday', 'is_weekend', 'month'], axis=1)
     
     #Drop n_non_stop_words due to weird scaling
     df = df.drop(['n_non_stop_words'], axis=1)

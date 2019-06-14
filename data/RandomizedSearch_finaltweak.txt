@@ -1,0 +1,42 @@
+RandomizedSearchCV took 7067.11 seconds for 100 candidates parameter settings.
+
+Model with rank: 1
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.01779698246237113, 'max_depth': None, 'n_estimators': 2559, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 2
+Mean validation score: -0.598 (std: 0.011)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.014681171728183718, 'max_depth': None, 'n_estimators': 2842, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 3
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.014863764060358508, 'max_depth': None, 'n_estimators': 2432, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 4
+Mean validation score: -0.598 (std: 0.011)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.014512497404217426, 'max_depth': None, 'n_estimators': 2468, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 5
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.019898256267624922, 'max_depth': None, 'n_estimators': 1600, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 6
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.019114136171285608, 'max_depth': None, 'n_estimators': 1893, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 7
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.010222696344246815, 'max_depth': None, 'n_estimators': 2400, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 8
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.025293987976850462, 'max_depth': None, 'n_estimators': 1329, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 9
+Mean validation score: -0.598 (std: 0.011)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.007003708216552095, 'max_depth': None, 'n_estimators': 2931, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
+Model with rank: 10
+Mean validation score: -0.598 (std: 0.010)
+Parameters: {'colsample_bytree': 0.39, 'learning_rate': 0.019743385338507165, 'max_depth': None, 'n_estimators': 1694, 'num_leaves': 37, 'random_state': 33, 'reg_alpha': 1.22, 'reg_lambda': 1.24, 'subsample': 0.41}
+
